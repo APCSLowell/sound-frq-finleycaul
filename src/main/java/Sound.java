@@ -17,14 +17,15 @@ public class Sound
   {  
     int numChanges = 0;
     for (int i=0; i<this.samples.length; i++){
-      if (this.samples[i]>limit){
-        this.samples[i]=limit;
-        numChanges++;
-    }
       if (this.samples[i]<-limit){
         this.samples[i]=-limit;
         numChanges++;
+    }
+      if (this.samples[i]>limit){
+        this.samples[i]=limit;
+        numChanges++;
       }
+    }
     return numChanges;
   }
 
