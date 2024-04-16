@@ -20,7 +20,8 @@ public class Sound
       if (this.samples[i]>limit){
         this.samples[i]=limit;
         numChanges++;
-    }else if (this.samples[i]<-limit){
+    }
+      if (this.samples[i]<-limit){
         this.samples[i]=-limit;
         numChanges++;
       }
